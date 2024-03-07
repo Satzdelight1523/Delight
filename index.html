@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalation Tracker Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Escalation Tracker</h1>
+    <form id="escalationForm" action="https://script.google.com/macros/s/AKfycby051u2QdaSDAcd-tOmKb0BhlOsolpvwxtrz19gDxtl68LkSI48xC7bv4N4M_OsaXy2Qw/exec" method="post">
+        <label for="emailReceivedDate">Email / Phone Received Date:</label>
+        <input type="date" id="emailReceivedDate" name="emailReceivedDate" required><br>
+
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" pattern="[A-Za-z\s]+" required><br>
+
+        <label for="primaryContact">Primary Contact:</label>
+        <input type="tel" id="primaryContact" name="primaryContact" pattern="[0-9]{10,15}" required><br>
+
+        <label for="alternateContact">Alternate Contact:</label>
+        <input type="tel" id="alternateContact" name="alternateContact" pattern="[0-9]{10,15}"><br>
+
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="projectName" name="projectName" required><br>
+
+        <label for="phase">Phase:</label>
+        <input type="text" id="phase" name="phase" required><br>
+
+        <label for="plotNo">Plot No:</label>
+        <input type="text" id="plotNo" name="plotNo" required><br>
+
+        <label for="zone">Zone:</label>
+        <input type="text" id="zone" name="zone" required><br>
+
+        <label for="qrc">QRC:</label>
+        <input type="text" id="qrc" name="qrc" required><br>
+
+        <label for="mailSendTo">Mail Send to (Delight Team):</label>
+        <input type="text" id="mailSendTo" name="mailSendTo" required><br>
+
+        <label for="queryIssue">Query / Issue:</label>
+        <input type="text" id="queryIssue" name="queryIssue" required><br>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br>
+
+        <label for="subCategory">Sub Category:</label>
+        <input type="text" id="subCategory" name="subCategory" required><br>
+
+        <label for="pendingTeam">Pending Team:</label>
+        <input type="text" id="pendingTeam" name="pendingTeam" required><br>
+
+        <label for="tickerNo">Ticker No:</label>
+        <input type="text" id="tickerNo" name="tickerNo" readonly><br>
+
+        <label for="issueStatus">Issue Status:</label>
+        <input type="text" id="issueStatus" name="issueStatus" required><br>
+
+        <label for="resolvedDate">Resolved Date:</label>
+        <input type="date" id="resolvedDate" name="resolvedDate"><br>
+
+        <label for="customerMailID">Customer Mail ID:</label>
+        <input type="email" id="customerMailID" name="customerMailID"><br>
+
+        <label for="phoneRequest">Phone Request:</label>
+        <input type="tel" id="phoneRequest" name="phoneRequest" pattern="[0-9]{10,15}"><br>
+
+        <label for="remarks">Remarks/Notes:</label>
+        <textarea id="remarks" name="remarks"></textarea><br>
+
+        <label for="tatMarch">TAT March:</label>
+        <input type="text" id="tatMarch" name="tatMarch"><br>
+
+        <button type="submit">Submit</button>
+        <button type="button" onclick="clearForm()">Clear</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
